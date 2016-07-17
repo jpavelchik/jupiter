@@ -1,19 +1,19 @@
-# src/Makefile.  Generated from Makefile.in by configure.
+# @configure_input@
 
 # Package-specific substitution variables
-package = Jupiter
-version = 1.0
-tarname = jupiter
+package = @PACKAGE_NAME@
+version = @PACKAGE_VERSION@
+tarname = @PACKAGE_TARNAME@
 distdir = $(tarname)-$(verison)
 
 # Prefix-specific substitution variables
-prefix      = /usr/local
-exec_prefix = ${prefix}
-bindir      = ${exec_prefix}/bin
+prefix      = @prefix@
+exec_prefix = @exec_prefix@
+bindir      = @bindir@
 
 # VPATH-specific substitution variables
-srcdir = .
-
+srcdir = @srcdir@
+VPATH  = @srcdir@
 
 CFLAGS = -g -O0
 
