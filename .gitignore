@@ -1,3 +1,15 @@
+*.o
+*.log
+aclocal.m4
+autom4te.cache
+compile
+config.h.in
+configure
+depcomp
+install-sh
+missing
 jupiter-*.tar.gz
+test-driver
+common/Makefile.in
 src/jupiter
 src/jupiter.dSYM
