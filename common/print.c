@@ -26,7 +26,7 @@ int print_routine(const char* name)
 	pthread_create(&tid, 0, print_it, (void*)name);
 	pthread_join(tid, 0);
 #else
-	print_it(name);
+	print_it((void*)name);
 #endif
 
 	return 0;

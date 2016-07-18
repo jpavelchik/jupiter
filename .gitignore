@@ -3,12 +3,14 @@
 aclocal.m4
 autom4te.cache
 compile
-config.h
-config.h.in
+config.guess
+config.h*
 config.status
+config.sub
 configure
 depcomp
 install-sh
+ltmain.sh
 Makefile
 Makefile.in
 missing
