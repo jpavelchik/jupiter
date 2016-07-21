@@ -26,7 +26,7 @@ if test "x${async_exec}" = xyes; then
 	AC_SEARCH_LIBS([pthread_create], [pthread], [have_pthreads=yes])
 
 	# Checks for header files.
-	AC_CHECK_HEADERS([stdlib.h])
+	AC_CHECK_HEADERS([stdlib.h ltdl.h])
 
 	if test "x${have_pthreads}" = xyes; then
 		AC_CHECK_HEADERS([pthread.h], [], [have_pthreads=no])
@@ -51,10 +51,13 @@ fi
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
+AC_SEARCH_LIBS([lt_dlopen], [ltdl])
 
 AC_CONFIG_FILES([Makefile
                  common/Makefile
                  include/Makefile
                  libjup/Makefile
-                 src/Makefile])
+                 src/Makefile
+                 src/modules/hithere/Makefile])
+
 AC_OUTPUT
